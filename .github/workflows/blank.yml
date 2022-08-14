@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: print youtube id
 
 # Controls when the workflow will run
 on:
@@ -21,4 +21,4 @@ jobs:
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o yt-dlp
           chmod a+rx yt-dlp
-          ./yt-dlp "https://www.youtube.com/watch?v=Zjww83YiHmc&list=PLD9QUQMdVK3QNYYwcTY_P62oqG2OzNJqp" --get-filename -o "%(id)s;%(title)s;%(channel)s;%(playlist_title)s"
+          ./yt-dlp "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V" --get-filename -o "%(id)s;%(title)s;%(channel)s;%(playlist_title)s"
