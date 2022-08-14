@@ -35,3 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           touch exmple.md
+          curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o yt-dlp
+          chmod a+rx yt-dlp
+          ./yt-dlp "https://www.youtube.com/playlist?list=PLWKjhJtqVAbmUE5IqyfGYEYjrZBYzaT4m" --get-filename -o "%(id)s;%(title)s;%(channel)s;%(playlist_title)s"
